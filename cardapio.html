@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="Cardápio demonstrativo da BRASA® — smash burgers feitos para comer com as mãos.">
+  <title>Cardápio — BRASA®</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="font-sans text-paper antialiased selection:bg-ember selection:text-white">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-md">
+    <nav class="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8" aria-label="Navegação principal">
+      <a href="./index.html#inicio" class="font-display text-[1.8rem] font-bold leading-none tracking-tight" aria-label="BRASA, página inicial">
+        BRASA<span class="text-ember">®</span><span class="ml-2 hidden align-middle font-sans text-[9px] font-semibold tracking-[.25em] text-muted sm:inline">SMASH HOUSE</span>
+      </a>
+      <div class="hidden items-center gap-8 md:flex">
+        <a aria-current="page" class="text-xs font-semibold tracking-[.13em] text-ember" href="#burgers">CARDÁPIO</a>
+        <a class="text-xs font-semibold tracking-[.13em] text-paper/75 transition hover:text-ember" href="#combos">COMBOS</a>
+        <a class="text-xs font-semibold tracking-[.13em] text-paper/75 transition hover:text-ember" href="./index.html#sobre">A BRASA</a>
+        <a class="text-xs font-semibold tracking-[.13em] text-paper/75 transition hover:text-ember" href="./index.html#contato">CONTATO</a>
+        <a data-whatsapp data-message="Olá! Gostaria de fazer um pedido." href="https://wa.me/554199963613" target="_blank" rel="noopener noreferrer" class="rounded-full bg-ember px-5 py-3 text-[11px] font-extrabold tracking-[.12em] text-white transition hover:bg-white hover:text-ink">PEDIR AGORA <i class="fa-brands fa-whatsapp ml-1" aria-hidden="true"></i></a>
+      </div>
+      <button id="menu-toggle" type="button" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-lg text-white md:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i id="menu-icon" class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-ink px-5 pb-6 pt-2 md:hidden">
+      <div class="mx-auto flex max-w-7xl flex-col">
+        <a class="mobile-link border-b border-white/10 py-4 font-display text-xl tracking-wide" href="#burgers">CARDÁPIO</a>
+        <a class="mobile-link border-b border-white/10 py-4 font-display text-xl tracking-wide" href="#combos">COMBOS</a>
+        <a class="mobile-link border-b border-white/10 py-4 font-display text-xl tracking-wide" href="./index.html#sobre">A BRASA</a>
+        <a class="mobile-link border-b border-white/10 py-4 font-display text-xl tracking-wide" href="./index.html#contato">CONTATO</a>
+        <a data-whatsapp data-message="Olá! Gostaria de fazer um pedido." href="https://wa.me/554199963613" target="_blank" rel="noopener noreferrer" class="mt-5 rounded-full bg-ember px-5 py-4 text-center text-xs font-extrabold tracking-[.12em]">PEDIR PELO WHATSAPP <i class="fa-brands fa-whatsapp ml-1" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden border-b border-white/10 pt-[76px]">
+      <div class="absolute inset-0">
+        <img class="hero-image h-full w-full object-cover object-center opacity-40" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1800&q=85" alt="" fetchpriority="high">
+        <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/25"></div>
+      </div>
+      <div class="relative mx-auto max-w-7xl px-5 pb-16 pt-20 sm:px-8 sm:pb-24 sm:pt-28">
+        <p class="mb-4 flex items-center gap-3 text-[10px] font-bold tracking-[.28em] text-ember"><span class="h-px w-9 bg-ember"></span> O CARDÁPIO DA CASA</p>
+        <h1 class="font-display text-6xl font-bold uppercase leading-[.9] tracking-[-.03em] sm:text-8xl">Escolhe o<br>seu <span class="text-ember">smash.</span></h1>
+        <p class="mt-6 max-w-md text-sm leading-6 text-white/70">Chapa quente, queijo derretido e combinações sem complicação. Escolha o seu e peça pelo WhatsApp.</p>
+        <p class="mt-5 text-[9px] font-bold tracking-[.18em] text-white/45">CARDÁPIO, PREÇOS E PEDIDOS DEMONSTRATIVOS</p>
+      </div>
+    </section>
+
+    <nav class="sticky top-[76px] z-30 border-b border-white/10 bg-ink/95 backdrop-blur-md" aria-label="Categorias do cardápio">
+      <div class="mx-auto flex max-w-7xl items-center gap-7 overflow-x-auto px-5 py-4 sm:px-8">
+        <a href="#burgers" class="whitespace-nowrap text-[10px] font-extrabold tracking-[.16em] text-ember">SMASH BURGERS</a>
+        <a href="#combos" class="whitespace-nowrap text-[10px] font-extrabold tracking-[.16em] text-paper/65 transition hover:text-ember">COMBOS</a>
+        <span class="ml-auto hidden whitespace-nowrap text-[9px] font-semibold tracking-[.12em] text-muted sm:inline">VALORES ILUSTRATIVOS</span>
+      </div>
+    </nav>
+
+    <section id="burgers" class="scroll-mt-36 px-5 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal mb-10 flex flex-col justify-between gap-4 sm:mb-14 sm:flex-row sm:items-end">
+          <div>
+            <p class="mb-3 text-[10px] font-bold tracking-[.25em] text-ember">DIRETO DA CHAPA</p>
+            <h2 class="font-display text-4xl font-bold uppercase leading-none sm:text-6xl">Smash burgers</h2>
+          </div>
+          <p class="max-w-sm text-xs leading-5 text-muted">Pão macio, carne prensada na chapa e ingredientes que fazem sentido juntos. Itens e preços apenas para demonstração.</p>
+        </div>
+
+        <div class="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="reveal group">
+            <div class="relative mb-5 aspect-[4/5] overflow-hidden bg-white/5">
+              <img class="h-full w-full object-cover transition duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt="Smash clássico com queijo, alface e tomate" loading="lazy">
+              <span class="absolute left-3 top-3 bg-ember px-3 py-1.5 text-[9px] font-bold tracking-[.16em]">CLÁSSICO</span>
+            </div>
+            <div class="flex items-start justify-between gap-3">
+              <div><h3 class="font-display text-2xl font-semibold uppercase">Brasa Clássico</h3><p class="mt-2 text-xs leading-5 text-muted">Smash 120g, cheddar, picles da casa e molho Brasa.</p></div>
+              <span class="whitespace-nowrap pt-1 text-sm font-bold text-ember">R$ 29</span>
+            </div>
+            <a data-whatsapp data-message="Olá! Quero pedir o Brasa Clássico (preço demonstrativo)." href="https://wa.me/554199963613" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-[10px] font-extrabold tracking-[.14em] text-paper/70 transition hover:text-ember">PEDIR ESTE <i class="fa-solid fa-arrow-right text-[9px]" aria-hidden="true"></i></a>
+          </article>
+
+          <article class="reveal group">
+            <div class="relative mb-5 aspect-[4/5] overflow-hidden bg-white/5">
+              <img class="h-full w-full object-cover transition duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=900&q=85" alt="Hambúrguer duplo com queijo e cebola caramelizada" loading="lazy">
+              <span class="absolute left-3 top-3 bg-white px-3 py-1.5 text-[9px] font-bold tracking-[.16em] text-ink">DUPLO</span>
+            </div>
+            <div class="flex items-start justify-between gap-3">
+              <div><h3 class="font-display text-2xl font-semibold uppercase">Duplo Fumaça</h3><p class="mt-2 text-xs leading-5 text-muted">Dois smash, queijo prato, cebola na chapa e barbecue.</p></div>
+              <span class="whitespace-nowrap pt-1 text-sm font-bold text-ember">R$ 38</span>
+            </div>
+            <a data-whatsapp data-message="Olá! Quero pedir o Duplo Fumaça (preço demonstrativo)." href="https://wa.me/554199963613" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-[10px] font-extrabold tracking-[.14em] text-paper/70 transition hover:text-ember">PEDIR ESTE <i class="fa-solid fa-arrow-right text-[9px]" aria-hidden="true"></i></a>
+          </article>
+
+          <article class="reveal group">
+            <div class="relative mb-5 aspect-[4/5] overflow-hidden bg-white/5">
+              <img class="h-full w-full object-cover transition duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85" alt="Hambúrguer artesanal com queijo cheddar e pão tostado" loading="lazy">
+              <span class="absolute left-3 top-3 bg-white px-3 py-1.5 text-[9px] font-bold tracking-[.16em] text-ink">PICANTE</span>
+            </div>
+            <div class="flex items-start justify-between gap-3">
+              <div><h3 class="font-display text-2xl font-semibold uppercase">Brasa Picante</h3><p class="mt-2 text-xs leading-5 text-muted">Smash 120g, pepper jack, jalapeño e maionese cítrica.</p></div>
+              <span class="whitespace-nowrap pt-1 text-sm font-bold text-ember">R$ 34</span>
+            </div>
+            <a data-whatsapp data-message="Olá! Quero pedir o Brasa Picante (preço demonstrativo)." href="https://wa.me/554199963613" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-[10px] font-extrabold tracking-[.14em] text-paper/70 transition hover:text-ember">PEDIR ESTE <i class="fa-solid fa-arrow-right text-[9px]" aria-hidden="true"></i></a>
+          </article>
+
+          <article class="reveal group">
+            <div class="relative mb-5 aspect-[4/5] overflow-hidden bg-white/5">
+              <img class="h-full w-full object-cover transition duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=900&q=85" alt="Hambúrguer com queijo e acompanhamentos servido em mesa" loading="lazy">
+              <span class="absolute left-3 top-3 bg-white px-3 py-1.5 text-[9px] font-bold tracking-[.16em] text-ink">SEM CARNE</span>
+            </div>
+            <div class="flex items-start justify-between gap-3">
+              <div><h3 class="font-display text-2xl font-semibold uppercase">Veggie na Brasa</h3><p class="mt-2 text-xs leading-5 text-muted">Burger vegetal, queijo, alface crocante e molho verde.</p></div>
+              <span class="whitespace-nowrap pt-1 text-sm font-bold text-ember">R$ 32</span>
+            </div>
+            <a data-whatsapp data-message="Olá! Quero pedir o Veggie na Brasa (preço demonstrativo)." href="https://wa.me/554199963613" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-[10px] font-extrabold tracking-[.14em] text-paper/70 transition hover:text-ember">PEDIR ESTE <i class="fa-solid fa-arrow-right text-[9px]" aria-hidden="true"></i></a>
+          </article>
+        </div>
+        <p class="mt-8 text-[10px] text-muted">Produtos, ingredientes e valores ilustrativos; confirme as informações com a loja antes de publicar.</p>
+      </div>
+    </section>
+
+    <section id="combos" class="scroll-mt-36 bg-ember px-5 py-16 text-ink sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-9 md:grid-cols-[1.1fr_.9fr]">
+        <div class="reveal">
+          <p class="mb-3 text-[10px] font-extrabold tracking-[.25em]">O PEDIDO COMPLETO</p>
+          <h2 class="font-display text-5xl font-bold uppercase leading-[.9] sm:text-7xl">Combo sem<br>conversa.</h2>
+          <p class="mt-5 max-w-md text-sm leading-6 text-black/75">Um Brasa Clássico, fritas crocantes e bebida gelada. Um combo demonstrativo para acompanhar seu smash favorito.</p>
+          <p class="mt-5 font-display text-4xl font-bold">R$ 45 <span class="font-sans text-[10px] font-extrabold tracking-[.15em]">VALOR ILUSTRATIVO</span></p>
+          <a data-whatsapp data-message="Olá! Quero pedir o Combo sem conversa (preço demonstrativo)." href="https://wa.me/554199963613" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-3 rounded-full bg-ink px-7 py-4 text-xs font-extrabold tracking-[.14em] text-white transition hover:bg-white hover:text-ink">PEDIR O COMBO <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="reveal">
+          <img class="aspect-[4/3] w-full object-cover shadow-2xl shadow-black/20" src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=1200&q=85" alt="Hambúrguer e batatas fritas compondo um combo" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 py-16 sm:px-8 sm:py-20">
+      <div class="reveal mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 border-b border-white/10 pb-12 sm:flex-row sm:items-center">
+        <div>
+          <p class="mb-2 text-[10px] font-bold tracking-[.25em] text-ember">BATEU A FOME?</p>
+          <h2 class="font-display text-3xl font-bold uppercase sm:text-5xl">A gente se fala no WhatsApp.</h2>
+          <p class="mt-3 text-xs text-muted">Produtos e preços demonstrativos; confirme a disponibilidade antes de fazer o pedido.</p>
+        </div>
+        <a data-whatsapp data-message="Olá! Vim pelo cardápio da BRASA." href="https://wa.me/554199963613" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-4 text-xs font-extrabold tracking-[.13em] transition hover:border-ember hover:text-ember">CHAMAR A BRASA <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 px-5 py-8 sm:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <a href="./index.html#inicio" class="font-display text-2xl font-bold">BRASA<span class="text-ember">®</span></a>
+      <p class="text-[10px] leading-5 text-muted">Cardápio conceitual demonstrativo. Produtos e preços ilustrativos.</p>
+      <a href="#burgers" class="text-[10px] font-bold tracking-[.15em] text-paper/60 hover:text-ember">VOLTAR AO CARDÁPIO ↑</a>
+    </div>
+  </footer>
+
+  <a data-whatsapp data-message="Olá! Vim pelo cardápio da BRASA." href="https://wa.me/554199963613" target="_blank" rel="noopener noreferrer" aria-label="Fale com a BRASA pelo WhatsApp" class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-2xl text-white shadow-xl shadow-black/30 transition hover:scale-110 hover:bg-[#1ebe5d]">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <script src="./script.js"></script>
+</body>
+</html>

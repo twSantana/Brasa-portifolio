@@ -1,0 +1,54 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: #11110f;
+}
+
+.hero-image {
+  animation: hero-arrive 1.2s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-open {
+  overflow: hidden;
+}
+
+@keyframes hero-arrive {
+  from {
+    opacity: .45;
+    transform: scale(1.055);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
