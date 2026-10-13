@@ -16,7 +16,7 @@ tailwind.config = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const WHATSAPP_NUMBER = "554199963613";
+  const WHATSAPP_NUMBER = "554195807668";
 
   document.querySelectorAll("[data-whatsapp]").forEach((link) => {
     const message = link.dataset.message || "Olá! Vim pelo site da BRASA.";
